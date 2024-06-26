@@ -1,0 +1,66 @@
+<template>
+<ul>
+    <li><a href="#home" class="active">首页</a></li>
+    <li><a href="#news">个人</a></li>
+    <li>
+        <div class="dropdown"> <a href="#" class="dropbtn">其他</a>
+            <div class="dropdown-content"> <a href="#">链接 1</a> <a href="#">链接 2</a> <a href="#">链接 3</a> </div>
+        </div>
+    </li>
+    <li><a href="#about">关于</a></li>
+</ul>
+</template>
+
+
+<script>
+
+</script>
+
+<style>
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* 去除背景颜色时，可以去除背景颜色设置 */
+}
+
+li {
+    float: left;
+}
+
+li a {
+    color: white; /* 将菜单项字体颜色改为黑色 */
+    padding: 14px 16px;
+    display: inline-block;
+    text-decoration: none;
+}
+
+li>a:hover:not(a.active),
+.dropbtn:hover {
+    background-color: #555;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 100px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, .2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    display: block;
+    z-index: 1;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+    color: deepskyblue;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+</style>
