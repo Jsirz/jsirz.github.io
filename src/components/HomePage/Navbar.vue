@@ -1,18 +1,27 @@
 <template>
 <ul>
-    <li><a href="#home" class="active">首页</a></li>
-    <li><a href="#news">个人</a></li>
+    <li @click="home">首页</li>
     <li>
-        <div class="dropdown"> <a href="#" class="dropbtn">其他</a>
-            <div class="dropdown-content"> <a href="#">链接 1</a> <a href="#">链接 2</a> <a href="#">链接 3</a> </div>
+        <div class="dropdown"> <a href="#" class="dropbtn">菜单</a>
+            <div class="dropdown-content"> <a href="">链接 1</a> <a href="#">链接 2</a> <a href="#">链接 3</a> </div>
         </div>
     </li>
-    <li><a href="#about">关于</a></li>
+    <li @click="aboutpersonal">关于</li>
 </ul>
 </template>
 
 
-<script>
+<script setup>
+import { ref, reactive, inject, onMounted, computed } from 'vue'
+import { useRouter, useRoute } from 'vue-router'
+const router = useRouter()
+
+const aboutpersonal = () => {
+    router.push("/about")
+}
+const home = () => {
+    router.push("/")
+}
 
 </script>
 
@@ -25,7 +34,10 @@ ul {
 }
 
 li {
-    float: left;
+    color: white; /* 将菜单项字体颜色改为黑色 */
+    padding: 14px 16px;
+    display: inline-block;
+    text-decoration: none;
 }
 
 li a {

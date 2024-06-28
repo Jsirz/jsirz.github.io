@@ -1,6 +1,5 @@
-
-
 import { createApp } from 'vue'
 import App from './App.vue'
-
-createApp(App).mount('#app')
+import router from './router'
+import BackGround from './components/HomePage/BackGround.vue'
+createApp(App).use(router,BackGround ).mount('#app')
