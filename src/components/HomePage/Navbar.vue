@@ -3,24 +3,32 @@
     <li @click="home">首页</li>
     <li>
         <div class="dropdown"> <a href="#" class="dropbtn">菜单</a>
-            <div class="dropdown-content"> <a href="">链接 1</a> <a href="#">链接 2</a> <a href="#">链接 3</a> </div>
+            <div class="dropdown-content"> <a @click="konwledge">知识屋</a> <a @click="practice">实践房</a> <a @click="sundry">杂物间</a> </div>
         </div>
     </li>
-    <li @click="aboutpersonal">关于</li>
+    <li @click="about">关于</li>
 </ul>
 </template>
 
 
 <script setup>
-import { ref, reactive, inject, onMounted, computed } from 'vue'
 import { useRouter, useRoute } from 'vue-router'
 const router = useRouter()
 
-const aboutpersonal = () => {
+const about = () => {
     router.push("/about")
 }
 const home = () => {
     router.push("/")
+}
+const konwledge = () => {
+    router.push("/knowledge")
+}
+const practice = () => {
+    router.push("/practice")
+}
+const sundry = () => {
+    router.push("/sundry")
 }
 
 </script>
