@@ -21,6 +21,10 @@ const routes=[
         path :"/Sundry",
         component: ()=>import("/src/components/Sundry/S_index.vue")
     },
+    {
+        path :"/Sundry/test",
+        component: ()=>import("/src/components/Sundry/BuildWeb//Test.vue")
+    },
     
     
 ]
