@@ -1,0 +1,1 @@
+import{c as a,d as e,F as o,a as s,o as t,B as r}from"./index-B98uzILW.js";import{_ as c}from"./Navbar-C59CvGQU.js";const n=s("h1",null,"知识屋首页",-1),u={__name:"K_index",setup(_){return(m,l)=>(t(),a(o,null,[e(c),e(r),n],64))}};export{u as default};
